@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification OTP - Sanara</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #4caf50;
+        margin-bottom: 10px;
+      }
+      .title {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .content {
+        margin-bottom: 30px;
+      }
+      .otp-container {
+        text-align: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        border: 2px dashed #4caf50;
+      }
+      .otp-label {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+      .otp-code {
+        font-size: 32px;
+        font-weight: bold;
+        color: #4caf50;
+        letter-spacing: 8px;
+        font-family: 'Courier New', monospace;
+        background-color: #ffffff;
+        padding: 15px 25px;
+        border-radius: 8px;
+        border: 2px solid #4caf50;
+        display: inline-block;
+        margin: 10px 0;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #666;
+        font-size: 14px;
+      }
+      .warning {
+        background-color: #fff3cd;
+        border: 1px solid #ffeaa7;
+        color: #856404;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .security-note {
+        background-color: #d1ecf1;
+        border: 1px solid #bee5eb;
+        color: #0c5460;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .instructions {
+        background-color: #e8f5e8;
+        border: 1px solid #4caf50;
+        color: #2e7d32;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">Sanara Wellness</div>
+        <div class="title">Email Verification OTP</div>
+      </div>
+
+      <div class="content">
+        <p>Hello <strong>{{username}}</strong>,</p>
+
+        <p>
+          Thank you for registering with Sanara Wellness! To complete your registration and activate your account,
+          please verify your email address using the OTP below:
+        </p>
+
+        <div class="otp-container">
+          <div class="otp-label">Your Email Verification OTP:</div>
+          <div class="otp-code">{{otp}}</div>
+          <div style="font-size: 14px; color: #666; margin-top: 10px">
+            Enter this 6-digit code to verify your email address
+          </div>
+        </div>
+
+        <div class="instructions">
+          <strong>How to verify your email:</strong>
+          <ol style="margin: 10px 0; padding-left: 20px">
+            <li>Copy the 6-digit OTP above</li>
+            <li>Go to your Sanara Wellness account verification page</li>
+            <li>Enter your email address and the OTP</li>
+            <li>Click "Verify Email" to complete the verification</li>
+          </ol>
+        </div>
+
+        <div class="warning">
+          <strong>Important:</strong> This OTP is valid for a limited time.
+          <p>
+            After verifying your email, you'll also need to verify your phone number to fully activate your account.
+          </p>
+          <p>If you didn't create an account with Sanara Wellness, please ignore this email.</p>
+        </div>
+
+        <div class="security-note">
+          <strong>Security Notice:</strong> Never share this OTP with anyone. Sanara Wellness will never ask for your
+          OTP via phone, email, or text message.
+        </div>
+
+        <p>The Sanara Wellness Team.</p>
+      </div>
+
+      <div class="footer">
+        <p>This is an automated email from Sanara. Please do not reply to this email.</p>
+        <p>If you have any questions, please contact our support team.</p>
+        <p>&copy; 2024 Sanara. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
